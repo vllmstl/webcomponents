@@ -1,5 +1,13 @@
 const template = document.createElement('template');
 template.innerHTML = `
+    <style>
+        :host {
+            display: block;
+            width: 300px;
+            height: 150px;
+            border: 5px solid #666;
+        }
+    </style>
     <div>Hello world</div>
     <div id="percentValue"></div>
 `;
@@ -15,7 +23,7 @@ class Spinner extends HTMLElement {
     set percent(val) {
         this.setAttribute('percent', val);
     }
-    connectCallback() {
+    connectedCallback() {
 
     }
     disconnectedCallback() {
