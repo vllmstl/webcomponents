@@ -9,8 +9,11 @@ class Spinner extends HTMLElement {
         this.attachShadow({mode: 'open'});
         this.shadowRoot.appendChild(template.content.cloneNode(true));
     }
+    get percent() {
+        return parseInt(this.getAttribute('percent'));
+    }
     set percent(val) {
-        this.setAttribute("percent", val);
+        this.setAttribute('percent', val);
     }
     connectCallback() {
 

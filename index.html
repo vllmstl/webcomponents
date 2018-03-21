@@ -8,4 +8,14 @@
     <body>
         <my-spinner percent="0"></my-spinner>
     </body>
+    <script type="text/javascript">
+        const mySpinner = document.querySelector('my-spinner');
+        const inter = setInterval( () => {
+            if (mySpinner.percent === 100) {
+                clearInterval(inter);
+            } else {
+                mySpinner.percent += 1;
+            }
+        }, 10);
+    </script>
 </html>
